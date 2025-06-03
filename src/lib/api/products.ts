@@ -29,14 +29,13 @@ export async function getAllProducts(limit = 20): Promise<DisplayProduct[]> {
 
 export async function getProductById(id: string): Promise<Product | null> {
   try {
-    const res = await fetch(
-      `${API_BASE_URL}${GET_PRODUCT_BY_ID_ENDPOINT}/${id}`,
-      {
-        cache: "no-store",
-      }
-    );
+    const res = await fetch(`${API_BASE_URL}${GET_PRODUCT_BY_ID_ENDPOINT}/${id}`, {
+      cache: "no-store",
+    });
 
-    if (!res.ok) throw new Error("Product not found");
+    if (!res.ok) {
+      throw new Error(`Product with ID ${id} not found`);
+    }
 
     const item: Product = await res.json();
     return item;

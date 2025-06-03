@@ -19,6 +19,7 @@ export enum BUTTON_LABELS {
 
 export enum MessageLabels {
   YOUR_CART_EMPTY = "Your cart is empty.",
+  NO_PRODUCT = "Product not found.",
 }
 
 export enum UISubTitles {
