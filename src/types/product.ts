@@ -16,4 +16,5 @@ export interface DisplayProduct {
   name: string;
   image: string;
   price: number;
+  category: string;
 }

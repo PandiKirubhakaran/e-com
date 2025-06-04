@@ -23,14 +23,14 @@ const ProductCard: React.FC<IProductCardProps> = ({ product }) => {
   };
 
   return (
-    <article className="flex flex-col justify-between border rounded-md p-4 shadow hover:shadow-lg  h-full">
+    <article className="flex flex-col justify-between border rounded-md p-4 shadow hover:shadow-lg h-full">
       <Link href={`/products/${product.id}`}>
         <img
           src={product.image}
           alt={`Image of ${product.name}`}
           className="w-full h-40 object-contain mb-4"
         />
-         <h3
+           <h3
           id={`product-${product.id}-title`}
           className="text-lg font-semibold mb-2"
          >
@@ -39,8 +39,12 @@ const ProductCard: React.FC<IProductCardProps> = ({ product }) => {
         <p className="mb-4 text-gray-700">${product.price.toFixed(2)}</p>
       </Link>
 
-      <Button onClick={handleAddToCart}>{BUTTON_LABELS.ADD_TO_CART}</Button>
-      
+      <div className="flex justify-between items-center gap-2 mt-auto">
+        <Button onClick={handleAddToCart}>{BUTTON_LABELS.ADD_TO_CART}</Button>
+        <Link href={`/products/${product.id}`}>
+          <Button variant="secondary">{BUTTON_LABELS.VIEW_DETAILS}</Button>
+        </Link>
+      </div>
     </article>
   );
 };

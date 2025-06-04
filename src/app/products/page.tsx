@@ -1,12 +1,25 @@
-import React from "react";
-import ProductList from "@/components/PLP/ProductList";
 import { getAllProducts } from "@/lib/api/products";
+import ProductList from "@/components/PLP/ProductList";
 
-export default async function ProductsPage() {
-  const products = await getAllProducts();
+type Props = {
+  searchParams?: {
+    category?: string;
+  };
+};
+
+export default async function ProductsPage({ searchParams }: Props) {
+  const category = searchParams?.category || "";
+  const allProducts = await getAllProducts();
+
+  const filteredProducts = category
+    ? allProducts.filter(
+        (item) => item.category.toLowerCase() === category.toLowerCase()
+      )
+    : allProducts;
+
   return (
-    <div className="container mx-auto p-4">
-      <ProductList products={products} />
-    </div>
+    <main className="p-6 max-w-7xl mx-auto">
+      <ProductList products={filteredProducts} />
+    </main>
   );
 }

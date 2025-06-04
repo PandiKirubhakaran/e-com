@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import React from "react";
+import { useRouter } from "next/navigation";
 import { Product } from "@/types/product";
 import Button from "../ui-common/Button";
 import { CartItem } from "@/types/cart";
 import { useCart } from "@/context/useCart";
-import { BUTTON_LABELS, UISubTitles } from "@/constants/enums";
+import { BUTTON_LABELS, CartActionType, UISubTitles } from "@/constants/enums";
 
 type IProductDetailsProps = {
   product: Product;
@@ -14,6 +15,7 @@ type IProductDetailsProps = {
 
 const ProductDetails: React.FC<IProductDetailsProps> = ({ product }) => {
   const { addToCart } = useCart();
+  const router = useRouter();
 
   const handleAddToCart = () => {
     const item: CartItem = {
@@ -26,8 +28,20 @@ const ProductDetails: React.FC<IProductDetailsProps> = ({ product }) => {
     addToCart(item);
   };
 
+  const handleGoBack = () => {
+    router.back();
+  };
+
   return (
     <main className="max-w-5xl mx-auto p-6">
+      <Button
+        onClick={handleGoBack}
+        variant="secondary"
+        aria-label="Go back to previous page"
+      >
+        {CartActionType.Back}
+      </Button>
+
       <h1 className="text-3xl font-bold mb-4">{product.title}</h1>
       <div className="flex flex-col md:flex-row gap-6">
         <div className="w-full md:w-1/3">
@@ -55,7 +69,6 @@ const ProductDetails: React.FC<IProductDetailsProps> = ({ product }) => {
           </p>
 
           <Button onClick={handleAddToCart}>{BUTTON_LABELS.ADD_TO_CART}</Button>
-          
         </div>
       </div>
     </main>

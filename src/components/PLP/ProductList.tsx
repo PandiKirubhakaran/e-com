@@ -1,6 +1,7 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import { DisplayProduct } from "@/types/product";
+import { MessageLabels } from "@/constants/enums";
 
 type IProductListProps = {
   products: DisplayProduct[];
@@ -18,9 +19,15 @@ const ProductList: React.FC<IProductListProps> = ({
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
         aria-label={title}
       >
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+        {products.length > 0 ? (
+          products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))
+        ) : (
+          <div className="col-span-full text-center text-gray-500 text-lg py-10">
+            {MessageLabels.NO_PRODUCT}
+          </div>
+        )}
       </section>
     </main>
   );
