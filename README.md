@@ -2,7 +2,7 @@ E-Com Next.js Store
 A basic e-commerce app built with Next.js and TailwindCSS using FakeStoreAPI.
 
 Live Demo
-https://e-com-euoq.vercel.app/products
+https://e-com-euoq.vercel.app
 
 How to Run Locally
 Clone the repo:
