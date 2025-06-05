@@ -1,14 +1,12 @@
 import { getAllProducts } from "@/lib/api/products";
 import ProductList from "@/components/PLP/ProductList";
 
-type Props = {
-  searchParams?: {
-    category?: string;
-  };
-};
-
-export default async function ProductsPage({ searchParams }: Props) {
-  const category = searchParams?.category || "";
+export default async function ProductsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string }>;
+}) {
+  const { category } = await searchParams;
   const allProducts = await getAllProducts();
 
   const filteredProducts = category
@@ -19,7 +17,7 @@ export default async function ProductsPage({ searchParams }: Props) {
 
   return (
     <main className="p-6 max-w-7xl mx-auto">
-      <ProductList products={filteredProducts} />
+      <ProductList products={filteredProducts} title={category} />
     </main>
   );
 }
