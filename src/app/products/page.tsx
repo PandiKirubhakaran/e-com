@@ -15,9 +15,5 @@ export default async function ProductsPage({
       )
     : allProducts;
 
-  return (
-    <main className="p-6 max-w-7xl mx-auto">
-      <ProductList products={filteredProducts} title={category} />
-    </main>
-  );
+  return <ProductList products={filteredProducts} title={category} />;
 }
