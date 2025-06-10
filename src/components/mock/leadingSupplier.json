@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Super-Fast, Hassle Free Delivery",
+    "description": "Delivered within 1–3 days, with all tax & duties paid within Canada. The price you see online is the price you pay.",
+    "image": "/Delivery.webp",
+    "alt": "Fast Delivery Icon"
+  },
+  {
+    "title": "Unrivalled Customer Service",
+    "description": "With over 75 years' industry experience, you can trust Quality Bearings Online.",
+    "image": "/Customer_Service_Icon_5.webp",
+    "alt": "Customer Service Icon"
+  },
+  {
+    "title": "Multi-Award-Winning",
+    "description": "Winners of The Queen's Award For Enterprise For International Trade, 2023 Lloyds Bank Employer Of The Year.",
+    "image": "/Awards.webp",
+    "alt": "Awards Icon"
+  },
+  {
+    "title": "World Renowned Brands",
+    "description": "Quality branded products from the world’s leading brands such as SKF, Kluber, Timken, FAG, and many more.",
+    "image": "/Trusted_Brands.webp",
+    "alt": "Brands Icon"
+  }
+]

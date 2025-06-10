@@ -1,0 +1,63 @@
+[
+  {
+    "label": "Brands",
+    "content": [
+      {
+        "title": "Top Brands",
+        "items": ["Nike", "Puma", "Adidas"]
+      }
+    ]
+  },
+  {
+    "label": "Men",
+    "content": [
+      {
+        "title": "Clothing",
+        "items": ["T-Shirts", "Jeans"]
+      },
+      {
+        "title": "Accessories",
+        "items": ["Belts", "Watches"]
+      }
+    ]
+  },
+  {
+    "label": "Women",
+    "content": [
+      {
+        "title": "Clothing",
+        "items": ["Kurtis", "Tops"]
+      },
+      {
+        "title": "Footwear",
+        "items": ["Heels", "Sneakers"]
+      }
+    ]
+  },
+  {
+    "label": "Electronics",
+    "content": [
+      {
+        "title": "Mobiles",
+        "items": ["iPhone", "Samsung"]
+      },
+      {
+        "title": "Laptops",
+        "items": ["MacBook", "HP"]
+      }
+    ]
+  },
+  {
+    "label": "Home & Living",
+    "content": [
+      {
+        "title": "Furniture",
+        "items": ["Sofas", "Beds"]
+      },
+      {
+        "title": "Decor",
+        "items": ["Lamps", "Clocks"]
+      }
+    ]
+  }
+]

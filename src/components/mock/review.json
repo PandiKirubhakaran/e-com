@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Mark Spencer",
+    "rating": 4,
+    "review": "Great value for the price.",
+    "date": "2025-05-10"
+  },
+  {
+    "name": "Sarah Lee",
+    "rating": 5,
+    "review": "Fantastic customer support and quality.",
+    "date": "2025-04-22"
+  },
+  {
+    "name": "John Doe",
+    "rating": 4.5,
+    "review": "Pretty good, just wish the shipping was faster.",
+    "date": "2025-03-15"
+  },
+  {
+    "name": "Emily Smith",
+    "rating": 5,
+    "review": "Love it! Will purchase again.",
+    "date": "2025-05-30"
+  },
+  {
+    "name": "Alice Johnson",
+    "rating": 4,
+    "review": "The product was good overall, but packaging could be improved.",
+    "date": "2025-06-01"
+  }
+]

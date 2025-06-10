@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { Product } from "@/types/product";
 import Button from "../ui-common/Button";
 import { CartItem } from "@/types/cart";
-import { useCart } from "@/context/useCart";
+import { useCart } from "@/context/CartContext";
 import { BUTTON_LABELS, CartActionType, UISubTitles } from "@/constants/enums";
 
 type IProductDetailsProps = {
