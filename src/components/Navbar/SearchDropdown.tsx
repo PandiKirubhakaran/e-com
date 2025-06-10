@@ -82,13 +82,15 @@ const SearchWithDropdown = ({ mode, closeMobileMenu }: Props) => {
                   }}
                   className="flex items-center gap-4 p-2 hover:bg-gray-50 rounded-md"
                 >
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover rounded-md"
-                    sizes="64px"
-                  />
+                  <div className="relative w-16 h-16 flex-shrink-0">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover rounded-md"
+                      sizes="64px"
+                    />
+                  </div>
                   <div>
                     <p className="text-sm font-medium text-gray-800">
                       {product.name}

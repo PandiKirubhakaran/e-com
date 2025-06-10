@@ -28,13 +28,14 @@ const ProductCard: React.FC<IProductCardProps> = ({ product }) => {
   return (
     <article className="flex flex-col justify-between border rounded-md p-4 shadow hover:shadow-lg h-full">
       <Link href={`/products/${product.id}`}>
-        <Image
-          src={product.image}
-          alt={`Image of ${product.name}`}
-          layout="fill"
-          objectFit="contain"
-          className="rounded"
-        />
+        <div className="relative w-full h-48 mb-2">
+          <Image
+            src={product.image}
+            alt={`Image of ${product.name}`}
+            fill
+            className="object-contain rounded"
+          />
+        </div>
         <h3
           id={`product-${product.id}-title`}
           className="text-lg font-semibold mb-2"
