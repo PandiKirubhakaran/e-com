@@ -4,13 +4,6 @@ import Image from "next/image";
 import featuresData from "@/components/mock/leadingSupplier.json";
 import { MessageLabels } from "@/constants/enums";
 
-type SupplierFeature = {
-  title: string;
-  description: string;
-  image: string;
-  alt: string;
-};
-
 const LeadingSupplier: React.FC = () => {
   return (
     <section

@@ -7,6 +7,7 @@ import Button from "../ui-common/Button";
 import Link from "next/link";
 import { BUTTON_LABELS } from "@/constants/enums";
 import { useRecentlyViewedContext } from "@/context/RecentlyViewedProvider";
+import Image from "next/image";
 
 type IProductCardProps = {
   product: DisplayProduct;
@@ -27,10 +28,12 @@ const ProductCard: React.FC<IProductCardProps> = ({ product }) => {
   return (
     <article className="flex flex-col justify-between border rounded-md p-4 shadow hover:shadow-lg h-full">
       <Link href={`/products/${product.id}`}>
-        <img
+        <Image
           src={product.image}
           alt={`Image of ${product.name}`}
-          className="w-full h-40 object-contain mb-4"
+          layout="fill"
+          objectFit="contain"
+          className="rounded"
         />
         <h3
           id={`product-${product.id}-title`}

@@ -3,16 +3,6 @@ import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import categoriesData from "@/components/mock/categories.json";
 
-type CategoryContent = {
-  title: string;
-  items: string[];
-};
-
-type Category = {
-  label: string;
-  content: CategoryContent[];
-};
-
 const CategoryDropdownNav = () => {
   const [clickedIndex, setClickedIndex] = useState<number | null>(null);
 

@@ -5,6 +5,7 @@ import Link from "next/link";
 import SearchBar from "@/components/ui-common/SearchBar";
 import ProductCard from "../PLP/ProductCard";
 import { useProducts } from "@/context/ProductContext";
+import Image from "next/image";
 
 type Props = {
   mode: "desktop" | "mobile";
@@ -81,10 +82,12 @@ const SearchWithDropdown = ({ mode, closeMobileMenu }: Props) => {
                   }}
                   className="flex items-center gap-4 p-2 hover:bg-gray-50 rounded-md"
                 >
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.name}
-                    className="w-16 h-16 object-cover rounded-md"
+                    fill
+                    className="object-cover rounded-md"
+                    sizes="64px"
                   />
                   <div>
                     <p className="text-sm font-medium text-gray-800">

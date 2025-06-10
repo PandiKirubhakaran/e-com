@@ -10,12 +10,10 @@ import "swiper/css/navigation";
 import { Swiper as SwiperType } from "swiper/types";
 
 const ReviewSlider: React.FC<{ reviews: Review[] }> = ({ reviews }) => {
-  const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
 
   const handleSwiperInit = (swiper: SwiperType) => {
-    setSwiperInstance(swiper);
     setIsBeginning(swiper.isBeginning);
     setIsEnd(swiper.isEnd);
   };
